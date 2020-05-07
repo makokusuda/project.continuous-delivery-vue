@@ -1,4 +1,16 @@
 # cc12-project.continuous-delivery-vue
 
-# API Calls
- - GET /api/locations => returns JSON data of locations (id, latitude, longitude, name)
+## API
+**GET** `/api/locations` returns JSON data of locations
+ 
+## Database Schema
+**Table** `locations`
+- id
+- latitude
+- longitude
+- site_name
+- name
+- state
+- city
+- highway
+- type
