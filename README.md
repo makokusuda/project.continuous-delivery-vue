@@ -36,3 +36,8 @@ Change line: max_connections = 500           # (change requires restart)
 ```
 brew services restart postgresql
 ```
+
+# CONNECT TO HEROKU DB
+```
+heroku pg:psql -a cc12-vue-project
+```
