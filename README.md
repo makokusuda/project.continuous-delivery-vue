@@ -26,7 +26,7 @@
 
 
 ## Steps to Setting Local Database
-If you have a truckstop database created:
+If you have a truckstop database created already run the following:
 1. Enter `psql` in your terminal
 2. `drop database truckstop;`
 3. `create database truckstop;`
