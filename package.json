@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node server",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "hack": "concurrently \"yarn hack:server\" \"yarn hack:client\"",
     "hack:client": "vue-cli-service serve",
     "hack:server": "nodemon server",
-    "hack": "concurrently \"yarn hack:server\" \"yarn hack:client\"",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "start": "node server"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -28,24 +28,34 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@sinonjs/fake-timers": "^6.0.1",
     "@vue/cli-plugin-babel": "^4.1.2",
     "@vue/cli-plugin-eslint": "^4.1.2",
-    "@vue/cli-plugin-unit-mocha": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "~4.3.0",
     "@vue/cli-service": "^4.1.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^1.0.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^26.0.1",
     "chai": "^4.2.0",
     "concurrently": "^5.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "jest": "^26.0.1",
     "lint-staged": "^10.0.7",
+    "mocha": "^7.1.2",
+    "mochapack": "^2.0.0",
     "nodemon": "^2.0.2",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.10",
     "webpack": "4.0.0"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -58,9 +68,5 @@
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }
