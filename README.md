@@ -1,12 +1,15 @@
 # cc12-project.continuous-delivery-vue
 
+
 ## Change Log
 - Added an .Env File. To locally connect to your database, please add a .env file to your workspace root folder.
 - USER = "your user name without the quotes"
 - PASSWORD = "your password without the quotes"
 
+
 ## API
 **GET** `/api/locations` returns JSON data of locations
+ 
  
 ## Database Schema
 **Table** `locations`
@@ -24,9 +27,24 @@
 - telephone,
 - fax
 
+**Table** `amenities`
+- id
+- location_id
+- name
+
+**Table** `truck_services`
+- id
+- location_id
+- name
+
+**Table** `restaurants`
+- id
+- location_id
+- name
+
 
 ## Steps to Setting Local Database
-If you have a truckstop database created:
+If you have a truckstop database created already run the following:
 1. Enter `psql` in your terminal
 2. `drop database truckstop;`
 3. `create database truckstop;`
