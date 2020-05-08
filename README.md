@@ -34,6 +34,8 @@
 
 **Table** `truck_services`
 - id
+- location_id
+- name
 
 **Table** `restaurants`
 - id
