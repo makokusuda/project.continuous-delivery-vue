@@ -63,3 +63,8 @@ If you have a truckstop database created already run the following:
 ```
 heroku pg:psql -a cc12-vue-project
 ```
+
+Pushing local database to heroku:
+```
+heroku pg:push truckstop DATABASE_URL -a cc12-vue-project
+```
